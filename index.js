@@ -225,7 +225,7 @@ vertex3d.prototype = {
         }
     };
 
-    var strokeColor = "rgba(255,255,255,0.1)";
+    var strokeColor = "rgba(0,0,0,0.5)";
     var backgroundColor = "rgba(0,0,0,1)";
     var vibrateFlag = false;
     
@@ -532,16 +532,16 @@ vertex3d.prototype = {
             } else {
                 vibrateFlag = false;
             };
-            if(invertCV.execution() > 0.7) {
-                strokeColor = "rgba(0,0,0,0.1)";
-                backgroundColor = "rgba(255,255,255,1)";
-            } else {
-                strokeColor = "rgba(255,255,255,0.1)";
-                backgroundColor = "rgba(0,0,0,1)";
-            };
+            // if(invertCV.execution() > 0.7) {
+            //     strokeColor = "rgba(0,0,0,0.1)";
+            //     backgroundColor = "rgba(255,255,255,1)";
+            // } else {
+            //     strokeColor = "rgba(255,255,255,0.1)";
+            //     backgroundColor = "rgba(0,0,0,1)";
+            // };
             ctx.clearRect(0, 0, canvasWidth, canvasHeight);
             ctx.fillStyle = backgroundColor;
-            ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+            //ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
             ctx.strokeStyle = strokeColor;
             update();
             draw();
